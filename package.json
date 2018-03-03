@@ -1,0 +1,9 @@
+{
+  "name": "example-chromeless",
+  "description": "An example implementation of https://github.com/graphcool/chromeless",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "chromeless": "^1.5.0"
+  }
+}
