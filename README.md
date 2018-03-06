@@ -3,11 +3,10 @@
 An example implementation of https://github.com/graphcool/chromeless
 
 ```bash
-npm instal
-node app-screenshot.js
-node app-screenshot-full-page.js
-node app-test-error.js
-node app-test-success.js
+docker build . -t ttibensky/example-chromeless
+docker run -it --user root ttibensky/example-chromeless /usr/bin/chromium-browser --headless --no-sandbox --remote-debugging-port=9222 --disable-gpu & npm install && node app-screenshot.js
+docker run -it --user root ttibensky/example-chromeless /usr/bin/chromium-browser --headless --no-sandbox --remote-debugging-port=9222 --disable-gpu & npm install && node app-screenshot-full-page.js
+docker run -it --user root ttibensky/example-chromeless /usr/bin/chromium-browser --headless --no-sandbox --remote-debugging-port=9222 --disable-gpu & npm install && node app-test-error.js
+docker run -it --user root ttibensky/example-chromeless /usr/bin/chromium-browser --headless --no-sandbox --remote-debugging-port=9222 --disable-gpu & npm install && node app-test-success.js
 ```
 
-Then view the image which path is in the output of `node ...` 
